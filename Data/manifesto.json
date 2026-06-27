@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "promise": "Free bus travel for women across Tamil Nadu",
+    "category": "Transport",
+    "status": "fulfilled",
+    "notes": "Scheme launched in May 2021, providing free bus rides for all women in government buses across the state."
+  },
+  {
+    "id": 2,
+    "promise": "₹1,000 monthly assistance for women heads of households",
+    "category": "Social Welfare",
+    "status": "fulfilled",
+    "notes": "Launched in September 2021, the scheme provides monthly financial assistance to women heads of households."
+  },
+  {
+    "id": 3,
+    "promise": "Waive education loans for students",
+    "category": "Education",
+    "status": "in-progress",
+    "notes": "Loan waiver scheme announced in February 2022, implementation ongoing."
+  },
+  {
+    "id": 4,
+    "promise": "Example unfulfilled promise",
+    "category": "Placeholder",
+    "status": "pending",
+    "notes": "This is a placeholder for an unfulfilled promise from the manifesto."
+  },
+  {
+    "id": 5,
+    "promise": "Another example promise in progress",
+    "category": "Placeholder",
+    "status": "in-progress",
+    "notes": "This is another placeholder representing a promise currently in progress."
+  }
+]

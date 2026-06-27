@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "M.K. Stalin",
+    "role": "Chief Minister",
+    "portfolios": ["Home", "General Administration", "All India Services"]
+  },
+  {
+    "id": 2,
+    "name": "Duraimurugan",
+    "role": "Minister",
+    "portfolios": ["Water Resources"]
+  },
+  {
+    "id": 3,
+    "name": "K.N. Nehru",
+    "role": "Minister",
+    "portfolios": ["Municipal Administration", "Urban Development"]
+  }
+]
