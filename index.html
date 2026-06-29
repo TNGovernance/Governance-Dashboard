@@ -751,6 +751,28 @@
         pending: { text: "Pending", css: "badge-pending" },
       };
 
+      async function readJsonResponse(response) {
+        const raw = await response.text();
+        if (!raw) {
+          return {};
+        }
+
+        try {
+          return JSON.parse(raw);
+        } catch {
+          return { error: raw };
+        }
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
       const viewPanels = {
         manifesto: document.getElementById("manifesto-panel"),
         ministers: document.getElementById("ministers-panel"),
@@ -846,9 +868,13 @@
 
       fetch("/api/assembly-news")
         .then(async (response) => {
-          const payload = await response.json();
+          const payload = await readJsonResponse(response);
           if (!response.ok) {
-            throw new Error(payload.details || payload.error || "Unable to load assembly coverage");
+            throw new Error(
+              payload.details ||
+                payload.error ||
+                `Unable to load assembly coverage (${response.status})`,
+            );
           }
           return payload;
         })
@@ -864,11 +890,12 @@
         .catch((error) => {
           const newsList = document.getElementById("assembly-list");
           const newsNote = document.getElementById("assembly-note");
-          newsNote.textContent =
-            "Assembly coverage could not be loaded from the local API endpoint.";
+          newsNote.textContent = "Assembly coverage could not be loaded right now.";
           newsList.innerHTML = `
             <div class="info-message error">
-              ${error.message}. Make sure you are running <code>node server.mjs</code> and have set the correct API key in <code>.env</code>.
+              ${escapeHtml(error.message)}. If this site is deployed on Vercel, check the
+              project environment variables and confirm your NewsAPI key supports server-side
+              production requests.
             </div>
           `;
         });
@@ -907,7 +934,7 @@
             }),
           });
 
-          const payload = await response.json();
+          const payload = await readJsonResponse(response);
           if (!response.ok) {
             throw new Error(payload.error || "Unable to sign in");
           }
@@ -950,7 +977,7 @@
               Authorization: `Bearer ${getAdminToken()}`,
             },
           });
-          const payload = await response.json();
+          const payload = await readJsonResponse(response);
           if (!response.ok) {
             throw new Error(payload.error || "Unable to delete update");
           }
@@ -983,7 +1010,7 @@
             body: JSON.stringify(payload),
           });
 
-          const savedBlog = await response.json();
+          const savedBlog = await readJsonResponse(response);
           if (!response.ok) {
             throw new Error(savedBlog.error || "Unable to publish update");
           }
@@ -1012,7 +1039,7 @@
               Authorization: `Bearer ${token}`,
             },
           });
-          const payload = await response.json();
+          const payload = await readJsonResponse(response);
           setAdminPublishingState(Boolean(payload.authenticated));
         } catch {
           setAdminPublishingState(false);
@@ -1036,9 +1063,9 @@
       async function loadBlogs() {
         try {
           const response = await fetch("/api/blogs");
-          const blogs = await response.json();
+          const blogs = await readJsonResponse(response);
           if (!response.ok) {
-            throw new Error("Unable to load blog updates");
+            throw new Error(blogs.error || "Unable to load blog updates");
           }
 
           blogsList.innerHTML = renderBlogs(blogs);
