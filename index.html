@@ -43,14 +43,21 @@
         gap: 28px;
         list-style: none;
       }
-      .nav-links a {
+      .nav-links a,
+      .nav-links button {
         font-family: Arial, sans-serif;
         font-size: 13px;
         color: #4a6080;
         text-decoration: none;
         letter-spacing: 0.02em;
+        background: none;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
       }
-      .nav-links a:hover {
+      .nav-links a:hover,
+      .nav-links button:hover,
+      .nav-links button.active {
         color: #1a5fa8;
       }
 
@@ -131,6 +138,9 @@
         height: 1px;
         background: #d0dce8;
       }
+      .content-panel.hidden {
+        display: none;
+      }
 
       .promise-card {
         border-top: 1px solid #d0dce8;
@@ -207,6 +217,360 @@
         color: #4a6080;
       }
 
+      .news-language-block + .news-language-block {
+        margin-top: 30px;
+      }
+      .news-language-block {
+        background: linear-gradient(180deg, #fbfdff 0%, #f4f8fc 100%);
+        border: 1px solid #d8e2ee;
+        border-radius: 12px;
+        padding: 18px 18px 10px;
+        box-shadow: 0 10px 24px rgba(13, 45, 94, 0.06);
+      }
+      .news-language-title {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #1a5fa8;
+        margin-bottom: 14px;
+      }
+      .news-language-title-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+      .news-language-title-row::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #d8e2ee;
+      }
+      .timeline-list {
+        position: relative;
+        display: grid;
+        gap: 16px;
+      }
+      .timeline-list::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 17px;
+        width: 2px;
+        background: linear-gradient(180deg, #b8cce2 0%, #dbe6f1 100%);
+      }
+      .timeline-item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        gap: 16px;
+        align-items: start;
+      }
+      .timeline-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: #1a5fa8;
+        border: 3px solid #eef5fc;
+        box-shadow: 0 0 0 3px rgba(26, 95, 168, 0.16);
+        margin-top: 8px;
+        position: relative;
+        z-index: 1;
+      }
+      .timeline-card {
+        background: #ffffff;
+        border: 1px solid #d8e2ee;
+        border-radius: 14px;
+        padding: 18px 18px 16px;
+        box-shadow: 0 8px 22px rgba(13, 45, 94, 0.06);
+      }
+      .timeline-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .timeline-date {
+        font-family: Arial, sans-serif;
+        font-size: 11px;
+        color: #577290;
+        background: #edf4fb;
+        border-radius: 999px;
+        padding: 5px 10px;
+      }
+      .timeline-title {
+        font-size: 20px;
+        line-height: 1.35;
+        color: #0d1b2a;
+        margin-bottom: 10px;
+      }
+      .timeline-title a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+      }
+      .timeline-title a:hover {
+        color: #1a5fa8;
+        border-bottom-color: rgba(26, 95, 168, 0.35);
+      }
+      .timeline-summary {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.7;
+        color: #4a6080;
+      }
+      .news-note {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        color: #5c7692;
+        margin-bottom: 18px;
+        background: #f4f8fc;
+        border: 1px solid #d8e2ee;
+        border-radius: 10px;
+        padding: 12px 14px;
+      }
+      .info-message {
+        background: #ffffff;
+        border: 1px dashed #c8d6e5;
+        border-radius: 10px;
+        padding: 16px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #4a6080;
+      }
+      .info-message.error {
+        color: #8c2f39;
+      }
+      .blog-composer {
+        background: #f0f5fb;
+        border: 1px solid #d0dce8;
+        border-radius: 4px;
+        padding: 20px;
+        margin-bottom: 26px;
+      }
+      .blog-composer.hidden,
+      .admin-login.hidden {
+        display: none;
+      }
+      .blog-composer h3 {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #1a5fa8;
+        margin-bottom: 14px;
+      }
+      .admin-login {
+        background: linear-gradient(180deg, #f7fafc 0%, #eef5fc 100%);
+        border: 1px solid #d8e2ee;
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 26px;
+      }
+      .admin-login h3 {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #1a5fa8;
+        margin-bottom: 10px;
+      }
+      .admin-login p {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.6;
+        color: #4a6080;
+        margin-bottom: 14px;
+      }
+      .admin-login-row {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      .admin-login-row input {
+        flex: 1;
+        border: 1px solid #c5d4e4;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+      }
+      .admin-login-row button,
+      .admin-logout {
+        background: #0d2d5e;
+        color: #fff;
+        border: 0;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .admin-toolbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+      .admin-badge {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #155724;
+        background: #e6f4ea;
+        border: 1px solid #c8e6cf;
+        border-radius: 999px;
+        padding: 6px 10px;
+      }
+      .blog-form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .blog-form-grid .full-width {
+        grid-column: 1 / -1;
+      }
+      .blog-composer label {
+        display: block;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #4a6080;
+        margin-bottom: 6px;
+      }
+      .blog-composer input,
+      .blog-composer textarea {
+        width: 100%;
+        border: 1px solid #c5d4e4;
+        border-radius: 4px;
+        padding: 10px 12px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #0d1b2a;
+        background: #fff;
+      }
+      .blog-composer textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+      .blog-submit {
+        margin-top: 14px;
+        background: #0d2d5e;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        padding: 11px 16px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .blog-submit:disabled {
+        opacity: 0.7;
+        cursor: wait;
+      }
+      .composer-status {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #4a6080;
+        margin-top: 10px;
+      }
+      .composer-status.error {
+        color: #8c2f39;
+      }
+      .blog-post {
+        background: #ffffff;
+        border: 1px solid #d8e2ee;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 22px rgba(13, 45, 94, 0.05);
+      }
+      .blog-post + .blog-post {
+        margin-top: 14px;
+      }
+      .blog-post-title {
+        font-size: 20px;
+        line-height: 1.35;
+        color: #0d1b2a;
+        margin-bottom: 8px;
+      }
+      .blog-post-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 14px;
+        margin-bottom: 8px;
+      }
+      .blog-post-meta {
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        color: #5c7692;
+        margin-bottom: 12px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #eef5fc;
+        border-radius: 999px;
+        padding: 6px 10px;
+      }
+      .blog-delete {
+        background: #fff4f4;
+        color: #8c2f39;
+        border: 1px solid #ecc6ca;
+        border-radius: 999px;
+        padding: 8px 12px;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        cursor: pointer;
+        flex-shrink: 0;
+      }
+      .blog-delete:hover {
+        background: #fdeaea;
+      }
+      .blog-post-summary {
+        font-size: 15px;
+        line-height: 1.6;
+        color: #0d1b2a;
+        margin-bottom: 10px;
+      }
+      .blog-post-body {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 1.7;
+        color: #4a6080;
+        white-space: pre-wrap;
+      }
+      .stack-list {
+        display: grid;
+        gap: 12px;
+      }
+
+      @media (max-width: 800px) {
+        .blog-form-grid {
+          grid-template-columns: 1fr;
+        }
+        .blog-form-grid .full-width {
+          grid-column: auto;
+        }
+        .timeline-item {
+          grid-template-columns: 26px 1fr;
+          gap: 12px;
+        }
+        .timeline-list::before {
+          left: 12px;
+        }
+        .timeline-title {
+          font-size: 18px;
+        }
+        .blog-post-header {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+
       .sidebar-card {
         background: #f0f5fb;
         border: 1px solid #d0dce8;
@@ -269,10 +633,24 @@
     <nav>
       <div class="nav-logo">TN <span>Governance</span> Dashboard</div>
       <ul class="nav-links">
-        <li><a href="#">Manifesto</a></li>
-        <li><a href="#">Ministers</a></li>
-        <li><a href="#">Assembly</a></li>
-        <li><a href="#">Blog</a></li>
+        <li>
+          <button type="button" class="nav-toggle active" data-view="manifesto">
+            Manifesto
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-toggle" data-view="ministers">
+            Ministers
+          </button>
+        </li>
+        <li>
+          <button type="button" class="nav-toggle" data-view="news">News</button>
+        </li>
+        <li>
+          <button type="button" class="nav-toggle" data-view="assembly">
+            Assembly
+          </button>
+        </li>
       </ul>
     </nav>
 
@@ -287,65 +665,69 @@
 
     <div class="main">
       <div>
-        <div class="section-label">TVK Manifesto Promises</div>
+        <section id="manifesto-panel" class="content-panel">
+          <div class="section-label">TVK Manifesto Promises</div>
+          <div id="promises-list"></div>
+        </section>
 
-        <!-- Promises will be inserted here by JavaScript -->
-        <div id="promises-list"></div>
+        <section id="ministers-panel" class="content-panel hidden">
+          <div class="section-label">Cabinet Overview</div>
+          <div id="ministers-list"></div>
+        </section>
 
-        <script>
-          fetch("data/manifesto.json")
-            .then((response) => response.json())
-            .then((promises) => {
-              const statusLabel = {
-                fulfilled: { text: "Fulfilled", css: "badge-done" },
-                "in-progress": { text: "In Progress", css: "badge-progress" },
-                pending: { text: "Pending", css: "badge-pending" },
-              };
+        <section id="assembly-panel" class="content-panel hidden">
+          <div class="section-label">Legislative Assembly News</div>
+          <div class="news-note" id="assembly-note">
+            Loading Tamil and English coverage related to the Tamil Nadu Legislative Assembly.
+          </div>
+          <div id="assembly-list"></div>
+        </section>
 
-              const container = document.getElementById("promises-list");
-
-              promises.forEach((p) => {
-                const badge = statusLabel[p.status];
-                container.innerHTML += `
-              <div class="promise-card">
-                <span class="promise-badge ${badge.css}">${badge.text}</span>
+        <section id="news-panel" class="content-panel hidden">
+          <div class="section-label">Editorial Newsroom</div>
+          <div class="admin-login" id="admin-login-panel">
+            <h3>Admin Access</h3>
+            <p>Only the designated admin can publish blog updates. Everyone else can view published posts below.</p>
+            <form id="admin-login-form">
+              <div class="admin-login-row">
+                <input id="admin-password" name="password" type="password" placeholder="Enter admin password" required />
+                <button type="submit" id="admin-login-button">Sign in</button>
+              </div>
+              <div class="composer-status" id="admin-login-status"></div>
+            </form>
+          </div>
+          <div class="blog-composer hidden" id="blog-composer">
+            <h3>Publish Blog Update</h3>
+            <div class="admin-toolbar">
+              <div class="admin-badge">Admin publishing mode</div>
+              <button class="admin-logout" id="admin-logout" type="button">Log out</button>
+            </div>
+            <form id="blog-form">
+              <div class="blog-form-grid">
                 <div>
-                  <div class="promise-text">${p.promise}</div>
-                  <div class="promise-meta">${p.category} · ${p.notes}</div>
+                  <label for="blog-title">Title</label>
+                  <input id="blog-title" name="title" type="text" required />
+                </div>
+                <div>
+                  <label for="blog-author">Author</label>
+                  <input id="blog-author" name="author" type="text" placeholder="Dashboard editor" />
+                </div>
+                <div class="full-width">
+                  <label for="blog-summary">Summary</label>
+                  <textarea id="blog-summary" name="summary" required></textarea>
+                </div>
+                <div class="full-width">
+                  <label for="blog-content">Full update</label>
+                  <textarea id="blog-content" name="content" required></textarea>
                 </div>
               </div>
-            `;
-              });
-            });
-        </script>
-      </div>
-
-      <div style="margin-top: 32px">
-        <div class="section-label">Cabinet Overview</div>
-        <div id="ministers-list"></div>
-      </div>
-
-      <script>
-        fetch("data/ministers.json")
-          .then((response) => response.json())
-          .then((ministers) => {
-            const container = document.getElementById("ministers-list");
-            ministers.forEach((m) => {
-              container.innerHTML += `
-        <div class="minister-row">
-          <div class="minister-initial">${m.name
-            .split(" ")
-            .map((n) => n[0])
-            .join("")}</div>
-          <div>
-            <div class="minister-name">${m.name}</div>
-            <div class="minister-ministry">${m.role} · ${m.portfolios.join(", ")}</div>
+              <button class="blog-submit" id="blog-submit" type="submit">Publish update</button>
+              <div class="composer-status" id="blog-status"></div>
+            </form>
           </div>
-        </div>
-      `;
-            });
-          });
-      </script>
+          <div id="blogs-list"></div>
+        </section>
+      </div>
 
       <div>
         <div class="sidebar-card">
@@ -363,9 +745,52 @@
     </footer>
 
     <script>
-      fetch("data/manifesto.json")
+      const statusLabel = {
+        fulfilled: { text: "Fulfilled", css: "badge-done" },
+        "in-progress": { text: "In Progress", css: "badge-progress" },
+        pending: { text: "Pending", css: "badge-pending" },
+      };
+
+      const viewPanels = {
+        manifesto: document.getElementById("manifesto-panel"),
+        ministers: document.getElementById("ministers-panel"),
+        assembly: document.getElementById("assembly-panel"),
+        news: document.getElementById("news-panel"),
+      };
+
+      document.querySelectorAll(".nav-toggle").forEach((button) => {
+        button.addEventListener("click", () => {
+          const selectedView = button.dataset.view;
+
+          Object.entries(viewPanels).forEach(([view, panel]) => {
+            panel.classList.toggle("hidden", view !== selectedView);
+          });
+
+          document.querySelectorAll(".nav-toggle").forEach((navButton) => {
+            navButton.classList.toggle("active", navButton === button);
+          });
+        });
+      });
+
+      fetch("Data/manifesto.json")
         .then((response) => response.json())
         .then((promises) => {
+          const promisesContainer = document.getElementById("promises-list");
+          promisesContainer.innerHTML = promises
+            .map((p) => {
+              const badge = statusLabel[p.status];
+              return `
+                <div class="promise-card">
+                  <span class="promise-badge ${badge.css}">${badge.text}</span>
+                  <div>
+                    <div class="promise-text">${p.promise}</div>
+                    <div class="promise-meta">${p.category} · ${p.notes}</div>
+                  </div>
+                </div>
+              `;
+            })
+            .join("");
+
           const stats = {
             total: promises.length,
             fulfilled: promises.filter((p) => p.status === "fulfilled").length,
@@ -394,6 +819,341 @@
   </div>
 `;
         });
+
+      fetch("Data/ministers.json")
+        .then((response) => response.json())
+        .then((ministers) => {
+          const ministersContainer = document.getElementById("ministers-list");
+          ministersContainer.innerHTML = ministers
+            .map((m) => {
+              const initials = m.name
+                .split(" ")
+                .map((namePart) => namePart[0])
+                .join("");
+
+              return `
+                <div class="minister-row">
+                  <div class="minister-initial">${initials}</div>
+                  <div>
+                    <div class="minister-name">${m.name}</div>
+                    <div class="minister-ministry">${m.role} · ${m.portfolios.join(", ")}</div>
+                  </div>
+                </div>
+              `;
+            })
+            .join("");
+        });
+
+      fetch("/api/assembly-news")
+        .then(async (response) => {
+          const payload = await response.json();
+          if (!response.ok) {
+            throw new Error(payload.details || payload.error || "Unable to load assembly coverage");
+          }
+          return payload;
+        })
+        .then((newsPayload) => {
+          const newsList = document.getElementById("assembly-list");
+          const newsNote = document.getElementById("assembly-note");
+          newsNote.textContent = newsPayload.note;
+
+          newsList.innerHTML = `
+            ${renderNewsBlock("English coverage", newsPayload.english)}
+          `;
+        })
+        .catch((error) => {
+          const newsList = document.getElementById("assembly-list");
+          const newsNote = document.getElementById("assembly-note");
+          newsNote.textContent =
+            "Assembly coverage could not be loaded from the local API endpoint.";
+          newsList.innerHTML = `
+            <div class="info-message error">
+              ${error.message}. Make sure you are running <code>node server.mjs</code> and have set the correct API key in <code>.env</code>.
+            </div>
+          `;
+        });
+
+      const blogsList = document.getElementById("blogs-list");
+      const adminLoginPanel = document.getElementById("admin-login-panel");
+      const adminLoginForm = document.getElementById("admin-login-form");
+      const adminLoginButton = document.getElementById("admin-login-button");
+      const adminLoginStatus = document.getElementById("admin-login-status");
+      const adminPasswordInput = document.getElementById("admin-password");
+      const blogComposer = document.getElementById("blog-composer");
+      const blogForm = document.getElementById("blog-form");
+      const blogStatus = document.getElementById("blog-status");
+      const blogSubmit = document.getElementById("blog-submit");
+      const adminLogoutButton = document.getElementById("admin-logout");
+      const ADMIN_SESSION_KEY = "tn_gov_admin_token";
+      let isAdminAuthenticated = false;
+
+      loadBlogs();
+      initialiseAdminState();
+
+      adminLoginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        adminLoginStatus.textContent = "Signing in...";
+        adminLoginStatus.classList.remove("error");
+        adminLoginButton.disabled = true;
+
+        try {
+          const response = await fetch("/api/admin/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              password: adminPasswordInput.value,
+            }),
+          });
+
+          const payload = await response.json();
+          if (!response.ok) {
+            throw new Error(payload.error || "Unable to sign in");
+          }
+
+          localStorage.setItem(ADMIN_SESSION_KEY, payload.token);
+          adminPasswordInput.value = "";
+          adminLoginStatus.textContent = "";
+          setAdminPublishingState(true);
+        } catch (error) {
+          adminLoginStatus.textContent = error.message;
+          adminLoginStatus.classList.add("error");
+        } finally {
+          adminLoginButton.disabled = false;
+        }
+      });
+
+      adminLogoutButton.addEventListener("click", () => {
+        localStorage.removeItem(ADMIN_SESSION_KEY);
+        setAdminPublishingState(false);
+      });
+
+      blogsList.addEventListener("click", async (event) => {
+        const deleteButton = event.target.closest(".blog-delete");
+        if (!deleteButton) {
+          return;
+        }
+
+        const blogId = deleteButton.dataset.blogId;
+        if (!blogId) {
+          return;
+        }
+
+        deleteButton.disabled = true;
+        deleteButton.textContent = "Deleting...";
+
+        try {
+          const response = await fetch(`/api/blogs?id=${encodeURIComponent(blogId)}`, {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${getAdminToken()}`,
+            },
+          });
+          const payload = await response.json();
+          if (!response.ok) {
+            throw new Error(payload.error || "Unable to delete update");
+          }
+
+          await loadBlogs();
+        } catch (error) {
+          blogStatus.textContent = error.message;
+          blogStatus.classList.add("error");
+          deleteButton.disabled = false;
+          deleteButton.textContent = "Delete";
+        }
+      });
+
+      blogForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        blogStatus.textContent = "Publishing update...";
+        blogStatus.classList.remove("error");
+        blogSubmit.disabled = true;
+
+        const formData = new FormData(blogForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        try {
+          const response = await fetch("/api/blogs", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${getAdminToken()}`,
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const savedBlog = await response.json();
+          if (!response.ok) {
+            throw new Error(savedBlog.error || "Unable to publish update");
+          }
+
+          blogForm.reset();
+          blogStatus.textContent = "Update published.";
+          await loadBlogs();
+        } catch (error) {
+          blogStatus.textContent = error.message;
+          blogStatus.classList.add("error");
+        } finally {
+          blogSubmit.disabled = false;
+        }
+      });
+
+      async function initialiseAdminState() {
+        const token = getAdminToken();
+        if (!token) {
+          setAdminPublishingState(false);
+          return;
+        }
+
+        try {
+          const response = await fetch("/api/admin/session", {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          });
+          const payload = await response.json();
+          setAdminPublishingState(Boolean(payload.authenticated));
+        } catch {
+          setAdminPublishingState(false);
+        }
+      }
+
+      function setAdminPublishingState(isAuthenticated) {
+        isAdminAuthenticated = isAuthenticated;
+        adminLoginPanel.classList.toggle("hidden", isAuthenticated);
+        blogComposer.classList.toggle("hidden", !isAuthenticated);
+        if (!isAuthenticated) {
+          localStorage.removeItem(ADMIN_SESSION_KEY);
+        }
+        loadBlogs();
+      }
+
+      function getAdminToken() {
+        return localStorage.getItem(ADMIN_SESSION_KEY) || "";
+      }
+
+      async function loadBlogs() {
+        try {
+          const response = await fetch("/api/blogs");
+          const blogs = await response.json();
+          if (!response.ok) {
+            throw new Error("Unable to load blog updates");
+          }
+
+          blogsList.innerHTML = renderBlogs(blogs);
+        } catch (error) {
+          blogsList.innerHTML = `
+            <div class="info-message error">${error.message}</div>
+          `;
+        }
+      }
+
+      function renderNewsBlock(title, articles) {
+        if (!articles.length) {
+          return `
+            <div class="news-language-block">
+              <div class="news-language-title-row">
+                <div class="news-language-title">${title}</div>
+              </div>
+              <div class="info-message">No matching articles were found right now.</div>
+            </div>
+          `;
+        }
+
+        return `
+          <div class="news-language-block">
+            <div class="news-language-title-row">
+              <div class="news-language-title">${title}</div>
+            </div>
+            <div class="timeline-list">
+            ${articles
+              .map(
+                (article) => `
+                  <article class="timeline-item">
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-card">
+                      <div class="timeline-meta">
+                        <div class="timeline-date">${formatNewsDate(article.publishedAt)}</div>
+                      </div>
+                      <div class="timeline-title">
+                        <a href="${article.url}" target="_blank" rel="noreferrer">${article.title}</a>
+                      </div>
+                      <div class="timeline-summary">${cleanTimelineSummary(article.description)}</div>
+                    </div>
+                  </article>
+                `,
+              )
+              .join("")}
+            </div>
+          </div>
+        `;
+      }
+
+      function formatNewsDate(dateString) {
+        if (!dateString) {
+          return "Date unavailable";
+        }
+
+        return new Date(dateString).toLocaleString("en-IN", {
+          dateStyle: "medium",
+          timeStyle: "short",
+        });
+      }
+
+      function cleanTimelineSummary(text) {
+        if (!text) {
+          return "No description available.";
+        }
+
+        const cleanedText = text
+          .replace(/ALSO READ:.*$/gis, "")
+          .replace(/Video\s*$/gis, "")
+          .replace(/\s+/g, " ")
+          .trim();
+
+        const firstChunk = cleanedText
+          .split(/(?<=[.!?])\s+/)
+          .slice(0, 2)
+          .join(" ")
+          .trim();
+
+        if (!firstChunk) {
+          return "No description available.";
+        }
+
+        if (firstChunk.length <= 220) {
+          return firstChunk;
+        }
+
+        return `${firstChunk.slice(0, 217).trim()}...`;
+      }
+
+      function renderBlogs(blogs) {
+        if (!blogs.length) {
+          return `<div class="info-message">No blog updates published yet.</div>`;
+        }
+
+        return `
+          <div class="stack-list">
+            ${blogs
+              .map(
+                (blog) => `
+                  <article class="blog-post">
+                    <div class="blog-post-header">
+                      <div class="blog-post-title">${blog.title}</div>
+                      ${isAdminAuthenticated ? `<button class="blog-delete" type="button" data-blog-id="${blog.id}">Delete</button>` : ""}
+                    </div>
+                    <div class="blog-post-meta">${formatNewsDate(blog.createdAt)} · ${blog.author || "Dashboard editor"}</div>
+                    <div class="blog-post-summary">${blog.summary}</div>
+                    <div class="blog-post-body">${blog.content}</div>
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
+        `;
+      }
     </script>
   </body>
 </html>
