@@ -890,12 +890,13 @@
         .catch((error) => {
           const newsList = document.getElementById("assembly-list");
           const newsNote = document.getElementById("assembly-note");
+          const assemblyAdvice = /rate-limit|concurrent requests/i.test(error.message)
+            ? "Please wait a moment and refresh. The backend now retries more gently and serves cached results when possible."
+            : "If this site is deployed on Vercel, check the project environment variables and confirm your World News API key is set for server-side production requests.";
           newsNote.textContent = "Assembly coverage could not be loaded right now.";
           newsList.innerHTML = `
             <div class="info-message error">
-              ${escapeHtml(error.message)}. If this site is deployed on Vercel, check the
-              project environment variables and confirm your World News API key is set for server-side
-              production requests.
+              ${escapeHtml(error.message)}. ${escapeHtml(assemblyAdvice)}
             </div>
           `;
         });
