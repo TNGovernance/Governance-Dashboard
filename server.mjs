@@ -18,6 +18,11 @@ const PORT = Number(process.env.PORT || 8001);
 
 loadEnvFile(path.join(__dirname, ".env"), readFileSync);
 
+const assemblyNewsProvider =
+  process.env.WORLD_NEWS_API_KEY || process.env.NEWS_API_KEY
+    ? "World News API"
+    : "not configured";
+
 const server = createServer(async (req, res) => {
   try {
     const requestUrl = new URL(req.url, `http://${req.headers.host}`);
@@ -66,7 +71,9 @@ server.on("error", (error) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`TN Governance Dashboard running at http://${HOST}:${PORT}`);
+  console.log(
+    `TN Governance Dashboard running at http://${HOST}:${PORT} (Assembly provider: ${assemblyNewsProvider})`,
+  );
 });
 
 async function serveStaticFile(requestPath, res) {
