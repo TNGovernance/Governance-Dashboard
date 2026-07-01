@@ -1,5 +1,3 @@
-import { handleAdminSession } from "../../lib/backend.mjs";
+import { handleAdminSession, withApiErrorHandling } from "../../lib/backend.mjs";
 
-export default async function handler(req, res) {
-  await handleAdminSession(req, res);
-}
+export default withApiErrorHandling(handleAdminSession, "Unexpected error while checking the admin session.");

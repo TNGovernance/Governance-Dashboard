@@ -1,5 +1,3 @@
-import { handleAdminLogin } from "../../lib/backend.mjs";
+import { handleAdminLogin, withApiErrorHandling } from "../../lib/backend.mjs";
 
-export default async function handler(req, res) {
-  await handleAdminLogin(req, res);
-}
+export default withApiErrorHandling(handleAdminLogin, "Unexpected error while signing in.");

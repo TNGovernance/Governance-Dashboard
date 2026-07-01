@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "node scripts/prepare-static.mjs",
     "dev": "node server.mjs"
   }
 }

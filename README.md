@@ -5,15 +5,15 @@ A civic dashboard tracking Tamil Nadu governance.
 ## Local setup
 
 1. Copy `.env.example` to `.env`
-2. Add your `newsapi.org` key as `NEWS_API_KEY=...`
+2. Add your `newsdata.io` key (starts with `pub_`) as `NEWS_API_KEY=...`
 3. Set `BLOG_ADMIN_PASSWORD=...` for the one admin who is allowed to publish blog posts
 4. Run `node server.mjs`
 5. Open `http://127.0.0.1:8001`
 
 ## Content flow
 
-- `Assembly` shows live legislative coverage from NewsAPI, filtered toward Tamil Nadu Legislative Assembly proceedings, governance, public policy, and manifesto-related debate
-- `News` is your local blog feed; everyone can view posts, but only the admin who knows `BLOG_ADMIN_PASSWORD` can sign in and publish or delete updates
+- `News` shows a chronological timeline of English-language legislative coverage from NewsData.io, filtered toward Tamil Nadu Legislative Assembly proceedings, governance, public policy, and manifesto-related debate
+- `Blogs` is your local blog feed; everyone can view posts, but only the admin who knows `BLOG_ADMIN_PASSWORD` can sign in and publish or delete updates
 
 ## Production
 

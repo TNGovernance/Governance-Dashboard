@@ -960,6 +960,28 @@
         pending: { text: "Pending", css: "badge-pending" },
       };
 
+      async function readJsonResponse(response) {
+        const raw = await response.text();
+        if (!raw) {
+          return {};
+        }
+
+        try {
+          return JSON.parse(raw);
+        } catch {
+          return { error: raw };
+        }
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
       const viewPanels = {
         manifesto: document.getElementById("manifesto-panel"),
         ministers: document.getElementById("ministers-panel"),
@@ -1133,7 +1155,7 @@
             }),
           });
 
-          const payload = await response.json();
+          const payload = await readJsonResponse(response);
           if (!response.ok) {
             throw new Error(payload.error || "Unable to sign in");
           }
@@ -1212,7 +1234,7 @@
             body: JSON.stringify(payload),
           });
 
-          const savedBlog = await response.json();
+          const savedBlog = await readJsonResponse(response);
           if (!response.ok) {
             throw new Error(savedBlog.error || "Unable to publish update");
           }
@@ -1241,7 +1263,7 @@
               Authorization: `Bearer ${token}`,
             },
           });
-          const payload = await response.json();
+          const payload = await readJsonResponse(response);
           setAdminPublishingState(Boolean(payload.authenticated));
         } catch {
           setAdminPublishingState(false);
@@ -1265,9 +1287,9 @@
       async function loadBlogs() {
         try {
           const response = await fetch("/api/blogs");
-          const blogs = await response.json();
+          const blogs = await readJsonResponse(response);
           if (!response.ok) {
-            throw new Error("Unable to load blog updates");
+            throw new Error(blogs.error || "Unable to load blog updates");
           }
 
           blogsList.innerHTML = renderBlogs(blogs);
