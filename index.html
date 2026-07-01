@@ -14,6 +14,7 @@
         font-family: "Georgia", serif;
         background: #ffffff;
         color: #0d1b2a;
+        font-size: 16px;
       }
       .sans {
         font-family: "Arial", sans-serif;
@@ -46,7 +47,7 @@
       .nav-links a,
       .nav-links button {
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         color: #4a6080;
         text-decoration: none;
         letter-spacing: 0.02em;
@@ -84,7 +85,7 @@
       }
       .hero p {
         font-family: Arial, sans-serif;
-        font-size: 14px;
+        font-size: 15px;
         color: #a8c4de;
         line-height: 1.7;
         max-width: 480px;
@@ -99,7 +100,7 @@
       }
       .section-tab {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.05em;
         color: #4a6080;
         padding: 14px 20px;
@@ -117,7 +118,7 @@
         display: grid;
         grid-template-columns: 1fr 320px;
         gap: 40px;
-        max-width: 1100px;
+        max-width: 1400px;
         margin: 0 auto;
       }
 
@@ -137,6 +138,32 @@
         flex: 1;
         height: 1px;
         background: #d0dce8;
+      }
+      .section-header-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+      .section-header-row .section-label {
+        flex: 1;
+        margin-bottom: 0;
+      }
+      .refresh-btn {
+        flex-shrink: 0;
+        background: #0d2d5e;
+        color: #fff;
+        border: 0;
+        border-radius: 4px;
+        padding: 7px 14px;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .refresh-btn:disabled {
+        opacity: 0.7;
+        cursor: wait;
       }
       .content-panel.hidden {
         display: none;
@@ -180,7 +207,7 @@
       }
       .promise-meta {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #7a94ad;
         margin-top: 4px;
       }
@@ -202,18 +229,18 @@
         align-items: center;
         justify-content: center;
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         font-weight: 700;
         flex-shrink: 0;
       }
       .minister-name {
-        font-size: 14px;
+        font-size: 15px;
         font-weight: bold;
         line-height: 1.3;
       }
       .minister-ministry {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #4a6080;
       }
 
@@ -229,7 +256,7 @@
       }
       .news-language-title {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #1a5fa8;
@@ -319,13 +346,13 @@
       }
       .timeline-summary {
         font-family: Arial, sans-serif;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.7;
         color: #4a6080;
       }
       .news-note {
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         color: #5c7692;
         margin-bottom: 18px;
         background: #f4f8fc;
@@ -339,7 +366,7 @@
         border-radius: 10px;
         padding: 16px;
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.6;
         color: #4a6080;
       }
@@ -359,7 +386,7 @@
       }
       .blog-composer h3 {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #1a5fa8;
@@ -374,7 +401,7 @@
       }
       .admin-login h3 {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #1a5fa8;
@@ -382,7 +409,7 @@
       }
       .admin-login p {
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.6;
         color: #4a6080;
         margin-bottom: 14px;
@@ -398,7 +425,7 @@
         border-radius: 8px;
         padding: 10px 12px;
         font-family: Arial, sans-serif;
-        font-size: 14px;
+        font-size: 15px;
       }
       .admin-login-row button,
       .admin-logout {
@@ -408,7 +435,7 @@
         border-radius: 8px;
         padding: 10px 14px;
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         cursor: pointer;
       }
       .admin-toolbar {
@@ -420,7 +447,7 @@
       }
       .admin-badge {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #155724;
         background: #e6f4ea;
         border: 1px solid #c8e6cf;
@@ -438,7 +465,7 @@
       .blog-composer label {
         display: block;
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #4a6080;
         margin-bottom: 6px;
       }
@@ -449,7 +476,7 @@
         border-radius: 4px;
         padding: 10px 12px;
         font-family: Arial, sans-serif;
-        font-size: 14px;
+        font-size: 15px;
         color: #0d1b2a;
         background: #fff;
       }
@@ -465,7 +492,7 @@
         border-radius: 4px;
         padding: 11px 16px;
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         cursor: pointer;
       }
       .blog-submit:disabled {
@@ -474,7 +501,7 @@
       }
       .composer-status {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #4a6080;
         margin-top: 10px;
       }
@@ -506,7 +533,7 @@
       }
       .blog-post-meta {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #5c7692;
         margin-bottom: 12px;
         display: inline-flex;
@@ -523,7 +550,7 @@
         border-radius: 999px;
         padding: 8px 12px;
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         cursor: pointer;
         flex-shrink: 0;
       }
@@ -538,7 +565,7 @@
       }
       .blog-post-body {
         font-family: Arial, sans-serif;
-        font-size: 13px;
+        font-size: 14px;
         line-height: 1.7;
         color: #4a6080;
         white-space: pre-wrap;
@@ -549,6 +576,9 @@
       }
 
       @media (max-width: 800px) {
+        .main {
+          grid-template-columns: 1fr;
+        }
         .blog-form-grid {
           grid-template-columns: 1fr;
         }
@@ -580,7 +610,7 @@
       }
       .sidebar-card h3 {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #1a5fa8;
@@ -599,7 +629,7 @@
       }
       .stat-label {
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         color: #4a6080;
       }
 
@@ -614,7 +644,7 @@
         margin-bottom: 4px;
       }
       .blog-title {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1.4;
         color: #0d1b2a;
       }
@@ -623,126 +653,305 @@
         background: #0d2d5e;
         color: #7aabda;
         font-family: Arial, sans-serif;
-        font-size: 12px;
+        font-size: 13px;
         padding: 24px 40px;
         margin-top: 40px;
+      }
+
+      /* Accessibility widget */
+      .a11y-widget {
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        z-index: 1000;
+        font-family: Arial, sans-serif;
+      }
+      .a11y-toggle-btn {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #0d2d5e;
+        color: #fff;
+        border: 0;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(13, 45, 94, 0.4);
+      }
+      .a11y-toggle-btn:focus-visible,
+      .a11y-option:focus-visible,
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible {
+        outline: 3px solid #f5a623;
+        outline-offset: 2px;
+      }
+      .a11y-panel {
+        position: absolute;
+        bottom: 62px;
+        right: 0;
+        width: 240px;
+        background: #fff;
+        border: 1px solid #d0dce8;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(13, 45, 94, 0.25);
+        padding: 14px;
+      }
+      .a11y-panel.hidden {
+        display: none;
+      }
+      .a11y-panel-title {
+        font-size: 13px;
+        font-weight: bold;
+        color: #0d2d5e;
+        margin-bottom: 10px;
+      }
+      .a11y-option {
+        display: block;
+        width: 100%;
+        text-align: left;
+        background: #f0f5fb;
+        color: #0d1b2a;
+        border: 1px solid #d0dce8;
+        border-radius: 6px;
+        padding: 9px 10px;
+        margin-bottom: 8px;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .a11y-option:last-child {
+        margin-bottom: 0;
+      }
+      .a11y-option[aria-pressed="true"] {
+        background: #0d2d5e;
+        color: #fff;
+        border-color: #0d2d5e;
+      }
+
+      /* High-contrast mode: force strong black/white contrast, with
+         exceptions for elements that already use white-on-dark-navy
+         so they don't flip to unreadable black-on-navy. */
+      body.high-contrast #page-content {
+        background: #ffffff;
+      }
+      body.high-contrast #page-content *,
+      body.high-contrast .a11y-widget * {
+        color: #000000 !important;
+        border-color: #000000 !important;
+      }
+      body.high-contrast #page-content .hero,
+      body.high-contrast #page-content .hero *,
+      body.high-contrast #page-content footer,
+      body.high-contrast #page-content footer *,
+      body.high-contrast #page-content .blog-submit,
+      body.high-contrast #page-content .refresh-btn,
+      body.high-contrast #page-content .admin-logout {
+        color: #ffffff !important;
+      }
+      body.high-contrast .a11y-toggle-btn {
+        color: #ffffff !important;
+      }
+      body.high-contrast .nav-links button.active {
+        text-decoration: underline;
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
-    <nav>
-      <div class="nav-logo">TN <span>Governance</span> Dashboard</div>
-      <ul class="nav-links">
-        <li>
-          <button type="button" class="nav-toggle active" data-view="manifesto">
-            Manifesto
-          </button>
-        </li>
-        <li>
-          <button type="button" class="nav-toggle" data-view="ministers">
-            Ministers
-          </button>
-        </li>
-        <li>
-          <button type="button" class="nav-toggle" data-view="news">News</button>
-        </li>
-        <li>
-          <button type="button" class="nav-toggle" data-view="assembly">
-            Assembly
-          </button>
-        </li>
-      </ul>
-    </nav>
+    <div id="page-content">
+      <nav>
+        <div class="nav-logo">TN <span>Governance</span> Dashboard</div>
+        <ul class="nav-links">
+          <li>
+            <button
+              type="button"
+              class="nav-toggle active"
+              data-view="manifesto"
+            >
+              Manifesto
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-toggle" data-view="ministers">
+              Ministers
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-toggle" data-view="blogs">
+              Blogs
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-toggle" data-view="news">
+              News
+            </button>
+          </li>
+        </ul>
+      </nav>
 
-    <div class="hero">
-      <div class="hero-label">Tamil Nadu · 2021–2026</div>
-      <h1>Tracking governance, promises, and public accountability</h1>
-      <p>
-        An independent tracker of TVK's manifesto commitments, cabinet activity,
-        and assembly sessions in Tamil Nadu.
-      </p>
-    </div>
-
-    <div class="main">
-      <div>
-        <section id="manifesto-panel" class="content-panel">
-          <div class="section-label">TVK Manifesto Promises</div>
-          <div id="promises-list"></div>
-        </section>
-
-        <section id="ministers-panel" class="content-panel hidden">
-          <div class="section-label">Cabinet Overview</div>
-          <div id="ministers-list"></div>
-        </section>
-
-        <section id="assembly-panel" class="content-panel hidden">
-          <div class="section-label">Legislative Assembly News</div>
-          <div class="news-note" id="assembly-note">
-            Loading Tamil and English coverage related to the Tamil Nadu Legislative Assembly.
-          </div>
-          <div id="assembly-list"></div>
-        </section>
-
-        <section id="news-panel" class="content-panel hidden">
-          <div class="section-label">Editorial Newsroom</div>
-          <div class="admin-login" id="admin-login-panel">
-            <h3>Admin Access</h3>
-            <p>Only the designated admin can publish blog updates. Everyone else can view published posts below.</p>
-            <form id="admin-login-form">
-              <div class="admin-login-row">
-                <input id="admin-password" name="password" type="password" placeholder="Enter admin password" required />
-                <button type="submit" id="admin-login-button">Sign in</button>
-              </div>
-              <div class="composer-status" id="admin-login-status"></div>
-            </form>
-          </div>
-          <div class="blog-composer hidden" id="blog-composer">
-            <h3>Publish Blog Update</h3>
-            <div class="admin-toolbar">
-              <div class="admin-badge">Admin publishing mode</div>
-              <button class="admin-logout" id="admin-logout" type="button">Log out</button>
-            </div>
-            <form id="blog-form">
-              <div class="blog-form-grid">
-                <div>
-                  <label for="blog-title">Title</label>
-                  <input id="blog-title" name="title" type="text" required />
-                </div>
-                <div>
-                  <label for="blog-author">Author</label>
-                  <input id="blog-author" name="author" type="text" placeholder="Dashboard editor" />
-                </div>
-                <div class="full-width">
-                  <label for="blog-summary">Summary</label>
-                  <textarea id="blog-summary" name="summary" required></textarea>
-                </div>
-                <div class="full-width">
-                  <label for="blog-content">Full update</label>
-                  <textarea id="blog-content" name="content" required></textarea>
-                </div>
-              </div>
-              <button class="blog-submit" id="blog-submit" type="submit">Publish update</button>
-              <div class="composer-status" id="blog-status"></div>
-            </form>
-          </div>
-          <div id="blogs-list"></div>
-        </section>
+      <div class="hero">
+        <div class="hero-label">Tamil Nadu · 2026</div>
+        <h1>Tracking governance, promises, and public accountability</h1>
+        <p>
+          An independent tracker of TVK's manifesto commitments, cabinet
+          activity, and assembly sessions in Tamil Nadu.
+        </p>
       </div>
 
-      <div>
-        <div class="sidebar-card">
-          <h3>Promise Tracker</h3>
+      <div class="main">
+        <div>
+          <section id="manifesto-panel" class="content-panel">
+            <div class="section-label">TVK Manifesto Promises</div>
+            <div id="promises-list"></div>
+          </section>
 
-          <!-- Tracker stats will be inserted here by JavaScript -->
-          <div id="tracker-stats"></div>
+          <section id="ministers-panel" class="content-panel hidden">
+            <div class="section-label">Cabinet Overview</div>
+            <div id="ministers-list"></div>
+          </section>
+
+          <section id="news-panel" class="content-panel hidden">
+            <div class="section-header-row">
+              <div class="section-label">Legislative Assembly News</div>
+              <button
+                type="button"
+                class="refresh-btn"
+                id="refresh-news-timeline"
+              >
+                ⟳ Refresh
+              </button>
+            </div>
+            <div class="news-note" id="news-timeline-note">
+              Loading the latest English-language coverage of the Tamil Nadu
+              Legislative Assembly.
+            </div>
+            <div id="news-timeline-list"></div>
+          </section>
+
+          <section id="blogs-panel" class="content-panel hidden">
+            <div class="section-label">Editorial Newsroom</div>
+            <div class="admin-login" id="admin-login-panel">
+              <h3>Admin Access</h3>
+              <p>
+                Only the designated admin can publish blog updates. Everyone
+                else can view published posts below.
+              </p>
+              <form id="admin-login-form">
+                <div class="admin-login-row">
+                  <input
+                    id="admin-password"
+                    name="password"
+                    type="password"
+                    placeholder="Enter admin password"
+                    required
+                  />
+                  <button type="submit" id="admin-login-button">Sign in</button>
+                </div>
+                <div class="composer-status" id="admin-login-status"></div>
+              </form>
+            </div>
+            <div class="blog-composer hidden" id="blog-composer">
+              <h3>Publish Blog Update</h3>
+              <div class="admin-toolbar">
+                <div class="admin-badge">Admin publishing mode</div>
+                <button class="admin-logout" id="admin-logout" type="button">
+                  Log out
+                </button>
+              </div>
+              <form id="blog-form">
+                <div class="blog-form-grid">
+                  <div>
+                    <label for="blog-title">Title</label>
+                    <input id="blog-title" name="title" type="text" required />
+                  </div>
+                  <div>
+                    <label for="blog-author">Author</label>
+                    <input
+                      id="blog-author"
+                      name="author"
+                      type="text"
+                      placeholder="Dashboard editor"
+                    />
+                  </div>
+                  <div class="full-width">
+                    <label for="blog-summary">Summary</label>
+                    <textarea
+                      id="blog-summary"
+                      name="summary"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="full-width">
+                    <label for="blog-content">Full update</label>
+                    <textarea
+                      id="blog-content"
+                      name="content"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <button class="blog-submit" id="blog-submit" type="submit">
+                  Publish update
+                </button>
+                <div class="composer-status" id="blog-status"></div>
+              </form>
+            </div>
+            <div id="blogs-list"></div>
+          </section>
+        </div>
+
+        <div>
+          <div class="sidebar-card">
+            <h3>Promise Tracker</h3>
+
+            <!-- Tracker stats will be inserted here by JavaScript -->
+            <div id="tracker-stats"></div>
+          </div>
         </div>
       </div>
+
+      <footer>
+        TN Governance Dashboard · Independent civic tracker · Not affiliated
+        with any party or government
+      </footer>
     </div>
 
-    <footer>
-      TN Governance Dashboard · Independent civic tracker · Not affiliated with
-      any party or government
-    </footer>
+    <div class="a11y-widget">
+      <button
+        type="button"
+        id="a11y-toggle"
+        class="a11y-toggle-btn"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-label="Open accessibility options"
+      >
+        ♿
+      </button>
+      <div
+        class="a11y-panel hidden"
+        id="a11y-panel"
+        role="menu"
+        aria-label="Accessibility options"
+      >
+        <div class="a11y-panel-title">Accessibility</div>
+        <button type="button" class="a11y-option" id="a11y-increase">
+          A+ Increase text size
+        </button>
+        <button type="button" class="a11y-option" id="a11y-decrease">
+          A− Decrease text size
+        </button>
+        <button type="button" class="a11y-option" id="a11y-reset">
+          Reset text size
+        </button>
+        <button
+          type="button"
+          class="a11y-option"
+          id="a11y-contrast"
+          aria-pressed="false"
+        >
+          Toggle high contrast
+        </button>
+      </div>
+    </div>
 
     <script>
       const statusLabel = {
@@ -754,8 +963,8 @@
       const viewPanels = {
         manifesto: document.getElementById("manifesto-panel"),
         ministers: document.getElementById("ministers-panel"),
-        assembly: document.getElementById("assembly-panel"),
         news: document.getElementById("news-panel"),
+        blogs: document.getElementById("blogs-panel"),
       };
 
       document.querySelectorAll(".nav-toggle").forEach((button) => {
@@ -844,34 +1053,51 @@
             .join("");
         });
 
-      fetch("/api/assembly-news")
-        .then(async (response) => {
-          const payload = await response.json();
-          if (!response.ok) {
-            throw new Error(payload.details || payload.error || "Unable to load assembly coverage");
-          }
-          return payload;
-        })
-        .then((newsPayload) => {
-          const newsList = document.getElementById("assembly-list");
-          const newsNote = document.getElementById("assembly-note");
-          newsNote.textContent = newsPayload.note;
+      function loadNewsTimeline() {
+        const newsList = document.getElementById("news-timeline-list");
+        const newsNote = document.getElementById("news-timeline-note");
+        const refreshButton = document.getElementById("refresh-news-timeline");
 
-          newsList.innerHTML = `
-            ${renderNewsBlock("English coverage", newsPayload.english)}
-          `;
-        })
-        .catch((error) => {
-          const newsList = document.getElementById("assembly-list");
-          const newsNote = document.getElementById("assembly-note");
-          newsNote.textContent =
-            "Assembly coverage could not be loaded from the local API endpoint.";
-          newsList.innerHTML = `
-            <div class="info-message error">
-              ${error.message}. Make sure you are running <code>node server.mjs</code> and have set the correct API key in <code>.env</code>.
-            </div>
-          `;
-        });
+        refreshButton.disabled = true;
+        refreshButton.textContent = "⟳ Refreshing...";
+
+        fetch("/api/assembly-news")
+          .then(async (response) => {
+            const payload = await response.json();
+            if (!response.ok) {
+              throw new Error(
+                payload.details ||
+                  payload.error ||
+                  "Unable to load assembly coverage",
+              );
+            }
+            return payload;
+          })
+          .then((newsPayload) => {
+            newsNote.textContent = newsPayload.note;
+            newsList.innerHTML = `
+              ${renderNewsBlock("English coverage", newsPayload.english)}
+            `;
+          })
+          .catch((error) => {
+            newsNote.textContent =
+              "Assembly coverage could not be loaded from the local API endpoint.";
+            newsList.innerHTML = `
+              <div class="info-message error">
+                ${error.message}. Make sure you are running <code>node server.mjs</code> and have set the correct API key in <code>.env</code>.
+              </div>
+            `;
+          })
+          .finally(() => {
+            refreshButton.disabled = false;
+            refreshButton.textContent = "⟳ Refresh";
+          });
+      }
+
+      loadNewsTimeline();
+      document
+        .getElementById("refresh-news-timeline")
+        .addEventListener("click", loadNewsTimeline);
 
       const blogsList = document.getElementById("blogs-list");
       const adminLoginPanel = document.getElementById("admin-login-panel");
@@ -944,12 +1170,15 @@
         deleteButton.textContent = "Deleting...";
 
         try {
-          const response = await fetch(`/api/blogs?id=${encodeURIComponent(blogId)}`, {
-            method: "DELETE",
-            headers: {
-              Authorization: `Bearer ${getAdminToken()}`,
+          const response = await fetch(
+            `/api/blogs?id=${encodeURIComponent(blogId)}`,
+            {
+              method: "DELETE",
+              headers: {
+                Authorization: `Bearer ${getAdminToken()}`,
+              },
             },
-          });
+          );
           const payload = await response.json();
           if (!response.ok) {
             throw new Error(payload.error || "Unable to delete update");
@@ -1154,6 +1383,122 @@
           </div>
         `;
       }
+
+      // --- Accessibility widget ---
+      (function setUpAccessibilityWidget() {
+        const pageContent = document.getElementById("page-content");
+        const toggleButton = document.getElementById("a11y-toggle");
+        const panel = document.getElementById("a11y-panel");
+        const increaseButton = document.getElementById("a11y-increase");
+        const decreaseButton = document.getElementById("a11y-decrease");
+        const resetButton = document.getElementById("a11y-reset");
+        const contrastButton = document.getElementById("a11y-contrast");
+
+        const MIN_ZOOM = 0.85;
+        const MAX_ZOOM = 1.6;
+        const ZOOM_STEP = 0.1;
+        let zoomLevel = 1;
+        let highContrastOn = false;
+
+        function readSavedPreferences() {
+          try {
+            const saved = JSON.parse(localStorage.getItem("a11yPrefs") || "{}");
+            if (typeof saved.zoomLevel === "number")
+              zoomLevel = saved.zoomLevel;
+            if (typeof saved.highContrastOn === "boolean")
+              highContrastOn = saved.highContrastOn;
+          } catch (error) {
+            // If localStorage is unavailable or the saved value is malformed,
+            // just fall back to the defaults set above.
+          }
+        }
+
+        function savePreferences() {
+          try {
+            localStorage.setItem(
+              "a11yPrefs",
+              JSON.stringify({ zoomLevel, highContrastOn }),
+            );
+          } catch (error) {
+            // Ignore write failures (e.g. private browsing mode).
+          }
+        }
+
+        function applyZoom() {
+          pageContent.style.zoom = zoomLevel;
+        }
+
+        function applyContrast() {
+          document.body.classList.toggle("high-contrast", highContrastOn);
+          contrastButton.setAttribute("aria-pressed", String(highContrastOn));
+        }
+
+        function openPanel() {
+          panel.classList.remove("hidden");
+          toggleButton.setAttribute("aria-expanded", "true");
+        }
+
+        function closePanel() {
+          panel.classList.add("hidden");
+          toggleButton.setAttribute("aria-expanded", "false");
+        }
+
+        toggleButton.addEventListener("click", () => {
+          const isOpen = !panel.classList.contains("hidden");
+          if (isOpen) {
+            closePanel();
+          } else {
+            openPanel();
+          }
+        });
+
+        document.addEventListener("click", (event) => {
+          const clickedInsideWidget = event.target.closest(".a11y-widget");
+          if (!clickedInsideWidget) {
+            closePanel();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closePanel();
+          }
+        });
+
+        increaseButton.addEventListener("click", () => {
+          zoomLevel = Math.min(
+            MAX_ZOOM,
+            Math.round((zoomLevel + ZOOM_STEP) * 100) / 100,
+          );
+          applyZoom();
+          savePreferences();
+        });
+
+        decreaseButton.addEventListener("click", () => {
+          zoomLevel = Math.max(
+            MIN_ZOOM,
+            Math.round((zoomLevel - ZOOM_STEP) * 100) / 100,
+          );
+          applyZoom();
+          savePreferences();
+        });
+
+        resetButton.addEventListener("click", () => {
+          zoomLevel = 1;
+          applyZoom();
+          savePreferences();
+        });
+
+        contrastButton.addEventListener("click", () => {
+          highContrastOn = !highContrastOn;
+          applyContrast();
+          savePreferences();
+        });
+
+        readSavedPreferences();
+        applyZoom();
+        applyContrast();
+      })();
     </script>
   </body>
 </html>
